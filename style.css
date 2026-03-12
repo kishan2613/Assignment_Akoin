@@ -29,11 +29,10 @@ align-items:center;
 padding:8px 4%;
 }
 
-
-
-.logo img{
-height:55px;
-width:auto;
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
 }
 
 nav ul{
@@ -41,6 +40,42 @@ display:flex;
 list-style:none;
 gap:25px;
 }
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav ul{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+align-items:center;
+gap:20px;
+padding:20px 0;
+display:none;
+}
+
+nav ul.active{
+display:flex;
+}
+
+}
+
+
+
+.logo img{
+height:55px;
+width:auto;
+}
+
+
 
 nav a{
 text-decoration:none;
@@ -60,6 +95,14 @@ color:white;
 padding:120px 8%;
 text-align:center;
 opacity: 0.8;
+}
+
+@media (max-width:768px){
+
+.hero{
+background: url("assets/Hero_phone.png") center/cover no-repeat;
+}
+
 }
 
 .hero h1{
@@ -251,8 +294,5 @@ margin-top:40px;
 font-size:32px;
 }
 
-nav ul{
-gap:15px;
-}
 
 }
